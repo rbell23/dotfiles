@@ -101,8 +101,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ll='exa -l --all'
-alias cd='z'
 alias cat='bat --paging=never --plain'
 alias vim="nvim"
-
-eval "$(zoxide init zsh)"
+  
