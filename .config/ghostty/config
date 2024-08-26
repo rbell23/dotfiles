@@ -1,0 +1,19 @@
+# Ghostty config
+
+# Theme(s)
+theme = Nord
+# Themes I like:
+# SpaceGray, Galaxy, Japanesque, Nord
+
+# Fonts
+font-family = Menlo
+font-size = 16
+
+# Text Behavior
+macos-option-as-alt = true
+keybind = cmd+right=text:\x05
+keybind = cmd+left=text:\x01
+keybind = alt+left=esc:b
+keybind = alt+right=esc:f
+
+shell-integration = detect
