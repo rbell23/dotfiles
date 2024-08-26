@@ -101,6 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ll='exa -l --all --group'
-alias cat='bat --paging=never --plain'
+alias cat='bat -P -p'
 alias vim="nvim"
-  
+
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+eval "$(starship init zsh)"
