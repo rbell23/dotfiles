@@ -100,7 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ll='exa -l --all --group'
+alias ll='eza -l --all --group --icons'
+alias ls='eza --icons'
 alias cat='bat -P -p'
 alias vim="nvim"
 
