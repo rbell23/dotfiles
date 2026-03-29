@@ -12,7 +12,7 @@ $character"""
 
 [directory]
 read_only = " 󰌾"
-style = "blue"
+style = "bright-blue"
 
 [character]
 success_symbol = "[❯](purple)"

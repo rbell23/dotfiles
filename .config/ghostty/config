@@ -7,7 +7,7 @@ theme = Nord
 
 # Fonts
 font-family = Menlo
-font-size = 16
+font-size = 18
 
 # Text Behavior
 macos-option-as-alt = true
