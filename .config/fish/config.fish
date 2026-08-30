@@ -1,23 +1,20 @@
+# pipx and Hermes install user-local executables here.
+fish_add_path "$HOME/.local/bin"
+
+# Prompt, navigation, and completions are only needed by interactive shells.
+# Guard optional workstation tools so this config also works in machine images.
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    set -gx STARSHIP_CONFIG "$HOME/.config/starship/starship.toml"
+    set -g fish_greeting
+
+    type -q starship; and starship init fish | source
+    type -q zoxide; and zoxide init fish | source
+    type -q fzf; and fzf --fish | source
+
+    if status is-login; and test -d "$HOME/git"
+        cd "$HOME/git"
+    end
+
+    test -r "$HOME/.orbstack/shell/init2.fish"; and source "$HOME/.orbstack/shell/init2.fish"
+    test -r "$HOME/.tenv.completion.fish"; and source "$HOME/.tenv.completion.fish"
 end
-
-set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
-starship init fish | source
-
-if status is-login
-    cd ~/git
-end
-
-zoxide init fish | source
-fzf --fish | source
-
-set -U fish_greeting
-
-# Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
-source $HOME/.tenv.completion.fish
-
-# Created by `pipx` on 2025-04-16 14:12:49
-set PATH $PATH /Users/robert.bell/.local/bin
